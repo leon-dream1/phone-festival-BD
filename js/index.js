@@ -1,17 +1,14 @@
 //Load all phone when reload done
 
 const loadPhone = async (randomAlphabetOrSearchedPhone) => {
-  console.log(randomAlphabetOrSearchedPhone);
   const res = await fetch(
     `https://openapi.programming-hero.com/api/phones?search=${randomAlphabetOrSearchedPhone}`
   );
   const data = await res.json();
-  console.log(data.data);
   const phoneContainer = document.getElementById("phone-container");
   phoneContainer.innerHTML = '';
 
   data.data.forEach((phone) => {
-    // console.log(phone);
     const div = document.createElement("div");
     div.id = phone.slug;
     div.classList.add("phone");
@@ -36,7 +33,7 @@ const randomAlphabetGenerator = () => {
 randomAlphabetGenerator();
 
 const searchPhone = () => {
-  const searchedPhone =   document.getElementById('searched-phone').value;
-  console.log(searchedPhone);
+  const searchedPhone =  document.getElementById('searched-phone').value;
   loadPhone(searchedPhone);
+  document.getElementById('searched-phone').value = '';
 }
