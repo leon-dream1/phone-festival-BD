@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,7 +26,34 @@
   </head>
   <body>
     <header></header>
-    <main></main>
+    <main>
+      <section class="phone-showcase">
+        <div class="container mx-auto">
+          <h2 class="text-[35px] text-[#100F0F] font-semibold text-center">
+            Search your phone
+          </h2>
+          <!--  -->
+          <!--  -->
+          <div class="flex w-[50%] mx-auto mt-[30px]">
+            <input
+            id="searched-phone"
+              class="bg-[#100F0F0D] rounded-lg py-[18px] px-[40px] w-full outline-none"
+              type="text"
+              placeholder="Search your phone"
+            />
+            <button
+            onclick="searchPhone()"
+            class="bg-[#0D6EFD] rounded-lg py-[18px] px-[35px] text-[20px] text-white font-bold"
+            >
+              Search
+            </button>
+          </div>
+          <div id="phone-container" class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+
+          </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
 
     <script src="js/index.js"></script>

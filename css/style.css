@@ -9,3 +9,17 @@
 :root{
     --primary-color: #0D6EFD;
 }
+
+.phone{
+    text-align: center;
+    border: 1px solid #CFCFCF;
+    border-radius: 8px;
+    background: #FFF;
+    padding: 25px;
+}
+.phone img, .phone h3, .phone p{
+    margin: 10px 0;
+}
+.phone img{
+    margin: 0 auto;
+}
